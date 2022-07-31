@@ -14,42 +14,6 @@ import { useNavigate } from "react-router-dom";
         setcredentials({...credentials, [e.target.name]:e.target.value})
     }
 
-    ////api call////
-    // const handleSubmit=(e)=>{
-    //     e.preventDefault();
-    //     try{
-    //     const data = axios.post("http://localhost:5000/api/login", credentials)
-    //     console.log(data.data)
-
-    //         let res = (data.data)
-    //         if (res.sucess === true) {
-    //             localStorage.setItem("token", res.authtoken)
-    //             navigate('/')
-    //         } else {
-    //             alert("please enter a valid crediantial")
-    //         }
-        
-        
-    //     } 
-    //     catch(error){
-    //         console.log(error)
-
-    //     }
-    // }
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     axios.post("http://localhost:5000/api/login", credentials).then((data) => {
-    //         console.log(data.data);
-    //         if (data.data.success === true) {
-    //             localStorage.setItem("token", data.data.authtoken)
-    //             navigate("/")
-             
-    //         }
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-
-    // };
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
@@ -90,7 +54,7 @@ import { useNavigate } from "react-router-dom";
     
     <div className="d-flex">
     <p>Need an Account?</p>
-    <a href="/register">SIGNUP</a>
+    <a href="/register">REGISTER HERE</a>
     </div>
     
     </form>

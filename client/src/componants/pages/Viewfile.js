@@ -12,14 +12,14 @@ function Viewfile() {
     const [key, setkey] = useState({ "key": "" })
     const [id, setId] = useState("")
     const [path, setPath] = useState("")
-    const [mimetype,setmimetype] = useState("")
+    const [mimetype, setmimetype] = useState("")
     const [compare_key, setcompare_key] = useState("")
-    
 
-//////////model////////////
+
+    //////////model////////////
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-   
+
 
 
 
@@ -110,7 +110,6 @@ function Viewfile() {
             console.log(filename);
             console.log(mimetype1);
             return download(data.data, filename, mimetype);
-             
         }).catch((err) => {
             console.log(err);
         });
@@ -127,13 +126,13 @@ function Viewfile() {
         setcompare_key(security_key)
         setShow(true)
     }
-   
+
     ///////compare key////////
     const downloadFile = () => {
         if (key === compare_key) {
-         downloadData(id, path, mimetype);
-         console.log("downloadFile")
-        }else{
+            downloadData(id, path, mimetype);
+            console.log("downloadFile")
+        } else {
             window.alert("Incorrect key, please enter correct key")
         }
 
