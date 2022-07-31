@@ -42,11 +42,8 @@ function Home() {
             timer: 1500
           })
           navigate("/viewfile");
-        }else{
-          if(data.data.success===false){
-          window.alert("please chosse file to upload")
-          }
         }
+
 
       })
 
